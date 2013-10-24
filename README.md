@@ -16,16 +16,19 @@ Data-binding client-side template engine
 ###Usuage
 
 Markup
-	```HTML
+
+```HTML
 	<div id="head">
 		<ul id="area">
 	        <li>{{title}}</li>
 	    </ul>
     </div>
+```
 	
 
 JS
-	```JavaScript
+```JS
+
 	// Reno.compile( selector <string>, data <object> );
 
 	var HeaderRenderer = Reno.compile('#head', { title : 'This is a title' });
@@ -33,5 +36,6 @@ JS
 	// changing data
 
 	HeaderRenderer.set('title','This is another title');
+```
 
 
