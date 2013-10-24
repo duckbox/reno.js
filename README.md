@@ -18,11 +18,9 @@ Data-binding client-side template engine
 Markup
 
 ```HTML
-	<div id="head">
-		<ul id="area">
-	        <li>{{title}}</li>
-	    </ul>
-    </div>
+	<ul id="head">
+        <li>{{title}}</li>
+    </ul>
 ```
 	
 
