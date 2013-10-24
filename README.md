@@ -15,12 +15,23 @@ Data-binding client-side template engine
 
 ###Usuage
 
+Markup
+
+	<div id="head">
+		<ul id="area">
+	        <li>{{title}}</li>
+	    </ul>
+    </div>
+	
+
+JS
+
 	// Reno.compile( selector <string>, data <object> );
 
-	var API = Reno.compile('#area', { title : 'This is a title' });
+	var HeaderRenderer = Reno.compile('#head', { title : 'This is a title' });
 
 	// changing data
 
-	API.set('title','This is another title');
+	HeaderRenderer.set('title','This is another title');
 
 
