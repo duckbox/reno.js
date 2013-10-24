@@ -10,6 +10,10 @@ Data-binding client-side template engine
 
 	npm install -d && bower install
 
+	// run server
+
+	grunt server
+
 
 ----
 
@@ -18,22 +22,21 @@ Data-binding client-side template engine
 Markup
 
 ```HTML
-	<ul id="head">
-        <li>{{title}}</li>
-    </ul>
+<ul id="head">
+    <li>{{title}}</li>
+</ul>
 ```
 	
 
 JS
 ```JS
+// Reno.compile( selector <string>, data <object> );
 
-	// Reno.compile( selector <string>, data <object> );
+var HeaderRenderer = Reno.compile('#head', { title : 'This is a title' });
 
-	var HeaderRenderer = Reno.compile('#head', { title : 'This is a title' });
+// changing data
 
-	// changing data
-
-	HeaderRenderer.set('title','This is another title');
+HeaderRenderer.set('title','This is another title');
 ```
 
 
