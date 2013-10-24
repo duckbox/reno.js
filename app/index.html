@@ -1,0 +1,51 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="hero-unit">
+                <h1>vars test</h1>
+                <ul>
+                    <li>data : {{data}}</li>
+                    <li>data2 : {{data2}}</li>
+                </ul>
+                data : <input type="text" class="typer" id="data" value="This is data"><br>
+                data2 : <input type="text" class="typer" id="data2" value="This is data2">
+            </div>
+        </div>
+
+
+        <!-- build:js scripts/main.js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <script>
+        (function(){
+
+            var API = Reno.compile({ data : 'This is data', data2 : 'This is data2' });
+
+            $('.typer').on('keyup', function(){
+
+                API.set( $(this).attr('id'), $(this).val() );
+
+            });
+
+        }).call();
+        </script>
+
+</body>
+</html>
